@@ -2004,10 +2004,10 @@
 
 // @section geometry
 
-// Printable area on the 235x235 plate. 225x225 keeps extra clip margin
-// on the right and back. Front and left are set by the endstops.
+// Printable area on the 235x235 plate. X is 225. Y is 223 because the
+// front origin sits 2mm further back to clear the front clip.
 #define X_BED_SIZE 225
-#define Y_BED_SIZE 225
+#define Y_BED_SIZE 223
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -2458,9 +2458,9 @@
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
 // Sprite nozzle is ~8mm in front of the plate when the rear Y switch clicks.
-// -13.5 puts Y=0 about 5.5mm onto the bed so the nozzle clears the front clip.
+// -15.5 puts Y=0 about 7.5mm onto the bed so the nozzle clears the front clip.
 // Moves below 0 are blocked by Y_MIN_POS.
-#define MANUAL_Y_HOME_POS -13.5
+#define MANUAL_Y_HOME_POS -15.5
 //#define MANUAL_Z_HOME_POS 0
 //#define MANUAL_I_HOME_POS 0
 //#define MANUAL_J_HOME_POS 0
