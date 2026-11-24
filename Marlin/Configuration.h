@@ -2006,11 +2006,11 @@
 
 // The size of the printable area
 #define X_BED_SIZE 230  // 235 less 5mm margin for low-profile bed clips
-#define Y_BED_SIZE 230
+#define Y_BED_SIZE 225  // 235 less 5mm front + 5mm back clip margins
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
-#define Y_MIN_POS -8  // Sprite carriage puts nozzle ~8mm in front of bed edge at Y endstop
+#define Y_MIN_POS -13 // Sprite nozzle ~8mm in front of bed edge at Y endstop, plus 5mm so Y0 clears front clips
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
