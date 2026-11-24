@@ -2010,7 +2010,9 @@
 #define Y_BED_SIZE 230
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
+// Sprite nozzle is ~6mm onto the plate at the left switch. The 230 box starts
+// 2.5mm in from the left edge, so the switch is X=3.5 and travel cannot go past it.
+#define X_MIN_POS 3.5
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
@@ -2457,7 +2459,7 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-//#define MANUAL_X_HOME_POS 0
+#define MANUAL_X_HOME_POS 3.5
 // Sprite nozzle is ~8mm in front of the plate when the rear Y switch clicks,
 // so Y=0 lands 2.5mm onto the bed. Moves below 0 are blocked by Y_MIN_POS.
 #define MANUAL_Y_HOME_POS -10.5
