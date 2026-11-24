@@ -1764,7 +1764,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -37, -39, 0 } // (mm) X, Y, Z distance from Nozzle tip to Probe trigger-point (Sprite + Creality bracket; set Z with M851 after babystep calibration)
+#define NOZZLE_TO_PROBE_OFFSET { -32, -42, 0 } // (mm) X, Y, Z distance from Nozzle tip to Probe trigger-point (Sprite upgrade + Creality bracket; set Z with M851 after babystep calibration)
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -2010,7 +2010,7 @@
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define Y_MIN_POS -8  // Sprite carriage puts nozzle ~8mm in front of bed edge at Y endstop
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
