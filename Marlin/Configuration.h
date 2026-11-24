@@ -2005,7 +2005,7 @@
 // @section geometry
 
 // Printable area on the 235x235 plate.
-// X is 225. Y is 210: Y=0 is 15.5mm past the rear switch, and the axis
+// X is 225. Y is 210: Y=0 is 15mm past the rear switch, and the axis
 // runs out of travel near firmware Y=220, so 210 stops short of the frame.
 #define X_BED_SIZE 225
 #define Y_BED_SIZE 210
@@ -2458,10 +2458,9 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-// Sprite nozzle is ~8mm in front of the plate when the rear Y switch clicks.
-// -15.5 puts Y=0 about 7.5mm onto the bed so the nozzle clears the front clip.
+// Rear Y switch is labeled Y=-15, so Y=0 is 15mm from the switch.
 // Moves below 0 are blocked by Y_MIN_POS.
-#define MANUAL_Y_HOME_POS -15.5
+#define MANUAL_Y_HOME_POS -15
 //#define MANUAL_Z_HOME_POS 0
 //#define MANUAL_I_HOME_POS 0
 //#define MANUAL_J_HOME_POS 0
