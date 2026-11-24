@@ -2004,13 +2004,10 @@
 
 // @section geometry
 
-// Printable area on the 235x235 plate.
-// Y is 227: front origin is 3mm further back than the first 2.5mm inset
-// (the nozzle was still hitting the front clip), back edge stays 2.5mm in.
-// X is 226.5: the Sprite nozzle is already ~6mm onto the plate at the left
-// switch, and the right edge stops 2.5mm short of the plate (6 + 226.5 = 232.5).
-#define X_BED_SIZE 226.5
-#define Y_BED_SIZE 227
+// Printable area on the 235x235 plate. 225x225 keeps extra clip margin
+// on the right and back. Front and left are set by the endstops.
+#define X_BED_SIZE 225
+#define Y_BED_SIZE 225
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
