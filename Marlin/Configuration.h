@@ -2004,10 +2004,11 @@
 
 // @section geometry
 
-// Printable area on the 235x235 plate. X is 225. Y is 223 because the
-// front origin sits 2mm further back to clear the front clip.
+// Printable area on the 235x235 plate.
+// X is 225. Y is 210: Y=0 is 15.5mm past the rear switch, and the axis
+// runs out of travel near firmware Y=220, so 210 stops short of the frame.
 #define X_BED_SIZE 225
-#define Y_BED_SIZE 223
+#define Y_BED_SIZE 210
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
