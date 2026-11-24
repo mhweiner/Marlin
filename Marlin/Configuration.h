@@ -2004,15 +2004,15 @@
 
 // @section geometry
 
-// The size of the printable area. 235x235 plate, hard-limited to 230x230
-// so a slicer cannot drive the nozzle into the clips.
-#define X_BED_SIZE 230
+// Printable area on the 235x235 plate.
+// Y is 230: 2.5mm off the front and the back.
+// X is 226.5: the Sprite nozzle is already ~6mm onto the plate at the left
+// switch, and the right edge stops 2.5mm short of the plate (6 + 226.5 = 232.5).
+#define X_BED_SIZE 226.5
 #define Y_BED_SIZE 230
 
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
-// Sprite nozzle is ~6mm onto the plate at the left switch. The 230 box starts
-// 2.5mm in from the left edge, so the switch is X=3.5 and travel cannot go past it.
-#define X_MIN_POS 3.5
+#define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
@@ -2459,7 +2459,6 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-#define MANUAL_X_HOME_POS 3.5
 // Sprite nozzle is ~8mm in front of the plate when the rear Y switch clicks,
 // so Y=0 lands 2.5mm onto the bed. Moves below 0 are blocked by Y_MIN_POS.
 #define MANUAL_Y_HOME_POS -10.5
